@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Marcquin Agulhas</title>
+	<link rel="icon" href="img/logo.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="home-box custom-box">
+		<h3>ESKOM</h3>
+		<!--<p>Total number of questions: <span class="total-question"></span></p>-->
+		<p>A TEST OF KNOWLEDGE</p>
+		<!--<p>Each question carries one point. No negative marking for wrong answers</p>
+		<p>Questions are of Multiple Choice</p>-->
+		<button type="button" class="btn" onclick="startQuiz()">Start</button>
+		<label for="topic">SELECT SYSTEM:</label>
+
+		<select name="topic" id="topic">
+			<option value="CRF">CRF</option>
+			<option value="SED">SED</option>
+			<option value="XPA">XPA</option>
+			<option value="SEK">SEK</option>
+		</select>
+	</div>
+
+    <div class="quiz-box custom-box hide">
+        <div class="question-number">
+
+        </div>
+        <div class="question-text">
+
+        </div>
+        <div class="option-container">
+
+        </div>
+        <div class="next-question-btn">
+            <button type="button" class="btn next-btn" onclick="next()">Next</button>
+            <button type="button" class="btn exit-btn" onclick="quizOver()">Quit</button>
+        </div>
+        <div class="answers-indicator">
+
+        </div>
+    </div>
+
+    <div class="result-box custom-box hide">
+        <h1>Result</h1>
+        <table>
+            <tr>
+                <td>Total Question</td>
+                <td><span class="total-question"></span></td>
+            </tr>
+            <tr>
+                <td>Attempt</td>
+                <td><span class="total-attempt"></span></td>
+            </tr>
+            <tr>
+                <td>Correct</td>
+                <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+                <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td><span class="percentage"></span></td>
+            </tr>
+            <tr>
+                <td>Your Total Score</td>
+                <td><span class="total-score"></span></td>
+            </tr>
+        </table>
+        <button type="button" class="btn try-again-btn" onclick="tryAgain()">Try Again</button>
+        <button type="button" class="btn go-home-btn" onclick="goToHome()">Go To Home</button>
+    </div>
+<!---//My Added div--->
+    <div id="total-correct-display">High Score: <span id="total-correct-count"></span>
+    </div>
+
+<!---//My added div--->
+    <script src="js/question.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
